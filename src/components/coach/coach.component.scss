@@ -1,0 +1,41 @@
+section{
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .coach-container{
+    width: 70%;
+    display: flex;
+    flex-wrap:wrap;
+    .seat{
+      flex: 1 1 14%;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      div{
+        width: 20px;
+        height: 20px;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 10px 10px 0 0;
+        text-align: center;
+      }
+      div.vacant{
+        border: 2px solid green;
+        background-color: rgb(188, 232, 188);
+      }
+      div.booked{
+        border: 2px solid red;
+        background-color: rgb(235, 155, 155);
+      }
+    }  
+    @media (max-width:768px) {
+      width: 100%;
+      .seat div {
+        width: 20px;
+        height: 20px;   
+        margin: 4px;         
+      }
+    }
+  }
+}

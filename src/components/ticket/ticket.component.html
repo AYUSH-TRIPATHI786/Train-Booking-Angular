@@ -1,0 +1,15 @@
+<section>
+
+  <h1>Book Tickets</h1>
+  <input type="number" [value]="count" min="1" max="7" (keyup)="updateCount($event)" />
+  <button type="submit" [disabled]="count<1"  (click)="submitForm()">Book</button>
+  @if (error){
+    <div class="error">{{error}}</div>
+  }
+  @if (bookedSeats.length > 0) {
+    <h3>Booked Seats Nos.</h3>
+    <p>
+      {{ bookedSeatsList() }}
+    </p>
+  }
+</section>

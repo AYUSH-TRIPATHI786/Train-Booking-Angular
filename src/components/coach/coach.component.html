@@ -1,0 +1,11 @@
+<section>
+  <div class="coach-container">
+    @for (item of seatList(); track item.seatNo) {
+      <div class="seat" >
+      <div class="{{item.status==='booked' ? 'booked' : 'vacant'}}">
+          {{item.seatNo}}
+        </div>
+      </div>
+    }
+  </div>
+</section>
